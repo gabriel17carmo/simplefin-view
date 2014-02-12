@@ -2,8 +2,13 @@
 @color-secundary: #34495e;
 @color-contrast: #fff;
 @color-hover: #1d2e3f;
+/*@color-primary: #232323;
+@color-secundary: #2c2c2c;
+@color-contrast: #fff;
+@color-hover: #000;*/
+@color-font: #262f38;
 @font-primary: 'Open Sans', sans-serif;
-@color-font: #373e46;
+@font-cash: 'Source Sans Pro', sans-serif;
 
 @import url('sprites.css');
 
@@ -13,6 +18,16 @@
     -ms-transition: all @time linear;
     -o-transition: all @time linear;
     transition: all @time linear;
+}
+
+.border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  .border-box;
 }
 
 .is-hide {
@@ -49,7 +64,7 @@ body {
     margin: 0;
     padding: 0;
     .tab-header { 
-      box-sizing:border-box;
+      .border-box;
       width: 100%;
       text-align: center; 
       .tab-header-cab {
@@ -107,13 +122,13 @@ body {
       vertical-align: bottom;
       font-size: 13px;
       a{
-        box-sizing:border-box;
+        .border-box;
         padding-top:15px;
         color: @color-contrast;
         text-decoration: none;
-        opacity: 0.5;
+        opacity: 0.7;
         display: block;
-        height: 100px;
+        height: 90px;
         .transition-all(0.2s);
         line-height: 15px; 
 
@@ -150,6 +165,7 @@ body {
 }
 
 .container {
+  color: @color-font;
   position: absolute;
   top: 50px;
   /*left: 100px;*/
@@ -157,7 +173,8 @@ body {
   padding-left: 120px;
   width: 100%;
   height: 100%;
-  box-sizing:border-box;
+
+  .border-box;
   h1 {
     font-family: @font-primary;
     font-size: 25px;
@@ -166,8 +183,8 @@ body {
     margin: 0;
     padding: 0 0 20px 0;
   }
-  .tab-receitas { 
-    box-sizing:border-box;
+  .tab-fin { 
+    .border-box;
     width: 100%;
     text-align: center; 
     .tab-cab {
@@ -189,25 +206,38 @@ body {
         z-index: 200;
       }
     }
-
-
-    .tab-rec-cell {
-      margin:0;
-      padding: 0;
-      font-size: 14px;
-      color: @color-font;
-      background-color: #ecf0f1;
-      height: 50px;
-      /*color: @color-font;*/
-      /*border-left: 1px solid black;*/
-      &.tab-rec-total {
-        background-color: @color-secundary;
-        color: @color-contrast;
+    .tab-rec-linha {
+      .tab-rec-cell {
+        font-family: @font-cash;
+        margin:0;
+        padding: 0;
+        font-size: 14px;
+        background-color: #f0f0f0;
+        height: 50px;
+        &.tab-rec-total {
+          background-color: #e8e8e8;
+          font-weight: 600;
+        }
+        &.tab-font-preta {
+          color: @color-font;
+          font-weight: 600;
+        }
       }
-
     }
+  }
+  .tab-receitas {
+    .tab-rec-cell {
+      color: #1d8600;
+    }
+  }
+  .tab-despesas {
+    .tab-rec-cell {
+      color: #af0000;
+    }
+  }
 
-
+  .form-tipo-despesa {
+    display: none;
   }
 
 

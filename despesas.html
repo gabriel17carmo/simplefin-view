@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
   <title>Simplefin - Simples gerenciador de finanças pessoais</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div>
-  <header class="header">
+  <div class="header">
 
     <div class="logo">Simplefin</div>
     <div class="meses-header">
@@ -38,23 +39,25 @@
         <div class="img-logout" title="Sair"></div>
       </div>
     </a>
-  </header>
+  </div>
 
 
   <div class="nav">
     <ul class="ul-nav">
+      <li class="menu-item">
+        <a href="" id="icone-home" class="menu-item-link"><div class="menu-icone"></div><br>Dashboard</a></li>
+      <li class="menu-item">
+        <a href="receitas.html" id="icone-receitas" class="menu-item-link fundo-escuro"><div class="menu-icone"></div><br>Receitas</a></li>
       <li class="menu-item is-active">
-        <a href="" id="icone-receitas" class="menu-item-link"><div class="menu-icone"></div><br>Receitas</a></li>
+        <a href="despesas.html" id="icone-despesas" class="menu-item-link"><div class="menu-icone"></div><br>Despesas</a></li>
       <li class="menu-item">
-        <a href="" id="icone-despesas" class="menu-item-link fundo-escuro"><div class="menu-icone"></div><br>Despesas</a></li>
+        <a href="" id="icone-add-receita" class="menu-item-link fundo-escuro"><div class="menu-icone"></div><br>Adicionar <br>Receita</a></li>
       <li class="menu-item">
-        <a href="" id="icone-add-receita" class="menu-item-link"><div class="menu-icone"></div><br>Adicionar <br>Receita</a></li>
+        <a href="" id="icone-add-receita" class="menu-item-link"><div class="menu-icone"></div><br>Adicionar <br>Despesa</a></li>
       <li class="menu-item">
-        <a href="" id="icone-add-receita" class="menu-item-link fundo-escuro"><div class="menu-icone"></div><br>Adicionar <br>Despesa</a></li>
+        <a href="" id="icone-conta" class="menu-item-link fundo-escuro"><div class="menu-icone"></div><br>Contabilizar <br>Mês</a></li>
       <li class="menu-item">
-        <a href="" id="icone-conta" class="menu-item-link"><div class="menu-icone"></div><br>Contabilizar <br>Mês</a></li>
-      <li class="menu-item">
-        <a href="" id="icone-config" class="menu-item-link fundo-escuro"><div class="menu-icone"></div><br>Configuração</a></li>
+        <a href="" id="icone-config" class="menu-item-link"><div class="menu-icone"></div><br>Configuração</a></li>
     </ul>
 
 
@@ -62,9 +65,9 @@
 
   </div>
   <div class="container">
-    <h1 class="titulo">Receitas</h1>
+    <h1 class="titulo">Despesas</h1>
 
-    <table class="tab-receitas">
+    <table class="tab-despesas tab-fin">
       <tr class="tab-cab">
         <th class="tab-cab-cell tab-tipo">Tipo</th>
         <th class="tab-cab-cell "><span class="th-header">Jan</span></th>
@@ -82,7 +85,7 @@
         <th class="tab-cab-cell ">Total</th>
       </tr>
       <tr class="tab-rec-linha">
-        <td class="tab-rec-cell">Teste Despesa</td>
+        <td class="tab-rec-cell tab-font-preta">Teste Despesa</td>
         <td class="tab-rec-cell">R$ 0,00</td>
         <td class="tab-rec-cell">R$ 0,00</td>
         <td class="tab-rec-cell">R$ 0,00</td>
@@ -98,7 +101,7 @@
         <td class="tab-rec-cell tab-rec-total">R$ 0,00</td>
       </tr>
       <tr class="tab-rec-linha">
-        <td class="tab-rec-cell">Teste 1</td>
+        <td class="tab-rec-cell tab-font-preta">Teste 1</td>
         <td class="tab-rec-cell">R$ 0,00</td>
         <td class="tab-rec-cell">R$ 0,00</td>
         <td class="tab-rec-cell">R$ 0,00</td>
@@ -114,7 +117,7 @@
         <td class="tab-rec-cell tab-rec-total">R$ 0,00</td>
       </tr>
       <tr class="tab-rec-linha">
-        <td class="tab-rec-cell">Testando</td>
+        <td class="tab-rec-cell tab-font-preta">Testando</td>
         <td class="tab-rec-cell">R$ 0,00</td>
         <td class="tab-rec-cell">R$ 0,00</td>
         <td class="tab-rec-cell">R$ 0,00</td>
@@ -130,7 +133,7 @@
         <td class="tab-rec-cell tab-rec-total">R$ 0,00</td>
       </tr>
       <tr class="tab-rec-linha">
-        <td class="tab-rec-cell">Gasto X</td>
+        <td class="tab-rec-cell tab-font-preta">Gasto X</td>
         <td class="tab-rec-cell">R$ 0,00</td>
         <td class="tab-rec-cell">R$ 0,00</td>
         <td class="tab-rec-cell">R$ 0,00</td>
@@ -146,7 +149,7 @@
         <td class="tab-rec-cell tab-rec-total">R$ 0,00</td>
       </tr>
       <tr class="tab-rec-linha">
-        <td class="tab-rec-cell">Gasolina</td>
+        <td class="tab-rec-cell tab-font-preta">Gasolina</td>
         <td class="tab-rec-cell">R$ 0,00</td>
         <td class="tab-rec-cell">R$ 0,00</td>
         <td class="tab-rec-cell">R$ 0,00</td>
@@ -162,7 +165,7 @@
         <td class="tab-rec-cell tab-rec-total">R$ 0,00</td>
       </tr>
       <tr class="tab-rec-linha">
-        <td class="tab-rec-cell">Almoço</td>
+        <td class="tab-rec-cell tab-font-preta">Almoço</td>
         <td class="tab-rec-cell">R$ 0,00</td>
         <td class="tab-rec-cell">R$ 0,00</td>
         <td class="tab-rec-cell">R$ 0,00</td>
@@ -178,7 +181,7 @@
         <td class="tab-rec-cell tab-rec-total">R$ 0,00</td>
       </tr>
       <tr class="tab-rec-linha">
-        <td class="tab-rec-cell">Testo 023</td>
+        <td class="tab-rec-cell tab-font-preta">Testo 023</td>
         <td class="tab-rec-cell">R$ 0,00</td>
         <td class="tab-rec-cell">R$ 0,00</td>
         <td class="tab-rec-cell">R$ 0,00</td>
@@ -194,7 +197,7 @@
         <td class="tab-rec-cell tab-rec-total">R$ 0,00</td>
       </tr>
       <tr class="tab-rec-linha">
-        <td class="tab-rec-cell tab-rec-total">Total</td>
+        <td class="tab-rec-cell tab-font-preta">Total</td>
         <td class="tab-rec-cell tab-rec-total">R$ 0,00</td>
         <td class="tab-rec-cell tab-rec-total">R$ 0,00</td>
         <td class="tab-rec-cell tab-rec-total">R$ 0,00</td>

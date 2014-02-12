@@ -3,9 +3,11 @@ $(function() {
     if($(document).scrollTop() >= 116){
       $(".meses-header").css('display', 'inline');
       $(".th-header").css('opacity', '0');
+      $(".th-header").css('display', 'none');
     }else{
       $(".meses-header").css('display', 'none');
       $(".th-header").css('opacity', '1');
+      $(".th-header").css('display', 'relative');
     }
   });
 
