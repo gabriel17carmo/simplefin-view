@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+  <link href='css/glDatePicker.default.css' rel='stylesheet' type='text/css'>
   <title>Simplefin - Simples gerenciador de finanças pessoais</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -77,12 +78,46 @@
         <form action="" class="form-tipo-despesa">
           <div class="bloco-form">
             <input type="text" class="form-input" id="nome" placeholder="Nome" required="">
+          </div>
+          <div class="bloco-form">
             <input type="submit" class="form-input" value="Salvar" id="">
           </div>
         </form>
-        
-
       </div>
+      <hr>
+      <br>
+      <h2>Criar despesa</h2>
+      <div class="">
+        <form action="" class="form-despesa">
+          <div class="form-despesa-bloco">
+            <div class="bloco-form">
+              <select id="" class="">
+                <option selected>Escolha um tipo de despesa</option>
+                <option value="1" class="icon-tux">Linux</option>
+                <option value="2" class="icon-finder">Mac</option>
+                <option value="3" class="icon-windows">Windows</option>
+                <option value="4" class="icon-android">Android</option>
+              </select>
+            </div>
+            <div class="bloco-form">
+              <textarea name="" id="despesa-desc" placeholder="Descrição"></textarea>
+            </div>
+          </div>
+          <div class="form-despesa-bloco">
+            <div class="bloco-form">
+              <span class="sifra">R$ </span><input type="number" min="0.00" max="9999.99" step="1" size="4" name="" id="despesa-val" placeholder="Valor">
+            </div>
+            <div class="bloco-form">
+              <input type="text" id="despesa-data" value="" placeholder="Data">
+            </div>
+          </div>
+        </form>
+      </div>
+    
+
+
+
+      
       
 
     </div>
@@ -91,5 +126,11 @@
 </div>
 <script src="js/jquery-1.11.0.min.js"></script>
 <script src="js/add.js"></script>
+<script src="js/glDatePicker.js"></script>
+<script>
+  $('#despesa-data').glDatePicker({
+    showAlways: false
+  });
+</script>
 </body>
 </html>
