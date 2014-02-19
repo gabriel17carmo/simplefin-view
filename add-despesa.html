@@ -67,31 +67,47 @@
   </div>
   <div class="container">
     <h1 class="titulo">Adicionar Despesa</h1>
+    <a id="show-form-tipo-despesa" href="#">Criar tipo de despesa</a>
+    <a id="show-form-tipo-receita" href="#">Criar tipo de receita</a>
+
 
     <div class="add-tipo-despesa">
-      
-
-    </div>
-    <div class="add-despesa">
-      <a id="show-form-tipo-despesa" href="#">Criar tipo de despesa</a>
-      <div class="">
+      <div class="toggle-despesa">
         <form action="" class="form-tipo-despesa">
           <div class="bloco-form">
-            <input type="text" class="form-input" id="nome" placeholder="Nome" required="">
+            <input type="text" class="form-input" id="nome" placeholder="Nome do tipo de despesa" required="">
           </div>
           <div class="bloco-form">
             <input type="submit" class="form-input" value="Salvar" id="">
           </div>
         </form>
       </div>
+    </div>
+
+    <div class="add-tipo-receita">
+      <div class="toggle-receita">
+        <form action="" class="form-tipo-receita">
+          <div class="bloco-form">
+            <input type="text" class="form-input" id="nome" placeholder="Nome do tipo de receita" required="">
+          </div>
+          <div class="bloco-form">
+            <input type="submit" class="form-input" value="Salvar" id="">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="add-despesa">
       <hr>
       <br>
-      <h2>Criar despesa</h2>
+      
       <div class="">
-        <form action="" class="form-despesa">
+        <form action="" class="form-despesa" >
           <div class="form-despesa-bloco">
+            <h2>Criar despesa</h2>
+            
             <div class="bloco-form">
-              <select id="" class="">
+              <select id="" class="" size="4">
                 <option selected>Escolha um tipo de despesa</option>
                 <option value="1" class="icon-tux">Linux</option>
                 <option value="2" class="icon-finder">Mac</option>
@@ -100,25 +116,53 @@
               </select>
             </div>
             <div class="bloco-form">
-              <textarea name="" id="despesa-desc" placeholder="Descrição"></textarea>
+              <input type="text" name="despesa-desc" id="despesa-desc" placeholder="Descrição" />
             </div>
-          </div>
-          <div class="form-despesa-bloco">
-            <div class="bloco-form">
-              <span class="sifra">R$ </span><input type="number" min="0.00" max="9999.99" step="1" size="4" name="" id="despesa-val" placeholder="Valor">
+            <div class="bloco-form despesa-inline">
+              <div class="number-cifra">
+                  <span class="cifra">R$</span>
+                  <span class="decimal">,00</span>
+                  <input type="text" min="0.00" max="9999.99" step="1" size="4" name="despesa-val" id="despesa-val" placeholder="Valor" />
+              </div>
             </div>
-            <div class="bloco-form">
+            <div class="bloco-form despesa-inline">
               <input type="text" id="despesa-data" value="" placeholder="Data">
             </div>
+
           </div>
         </form>
+        <form action="" class="form-despesa">
+          <h2>Criar despesa</h2>
+          <div class="form-despesa-bloco">
+            
+            <div class="bloco-form">
+              <select id="" class="" size="4">
+                <option selected>Escolha um tipo de despesa</option>
+                <option value="1" class="icon-tux">Linux</option>
+                <option value="2" class="icon-finder">Mac</option>
+                <option value="3" class="icon-windows">Windows</option>
+                <option value="4" class="icon-android">Android</option>
+              </select>
+            </div>
+            <div class="bloco-form">
+              <input type="text" name="despesa-desc" id="despesa-desc" placeholder="Descrição" />
+            </div>
+            <div class="bloco-form despesa-inline">
+              <div class="number-cifra">
+                  <span class="cifra">R$</span>
+                  <span class="decimal">,00</span>
+                  <input type="text" min="0.00" max="9999.99" step="1" size="4" name="despesa-val" id="despesa-val" placeholder="Valor" />
+              </div>
+            </div>
+            <div class="bloco-form despesa-inline">
+              <input type="text" id="despesa-data" value="" placeholder="Data">
+            </div>
+
+          </div>
+        </form>
+
+
       </div>
-    
-
-
-
-      
-      
 
     </div>
   </div>
@@ -128,9 +172,9 @@
 <script src="js/add.js"></script>
 <script src="js/glDatePicker.js"></script>
 <script>
-  $('#despesa-data').glDatePicker({
-    showAlways: false
-  });
+  // $('#despesa-data').glDatePicker({
+  //   showAlways: false
+  // });
 </script>
 </body>
 </html>

@@ -15,6 +15,7 @@
 @font-cash: 'Source Sans Pro', sans-serif;
 
 @import url('sprites.css');
+@import url('add-despesa.less');
 
 .transition-all(@time: 0.2s){
     -webkit-transition: all @time linear;
@@ -208,7 +209,7 @@ body {
   }
   hr {
     width: 98%;
-    opacity: 0.2;
+    opacity: 0.3;
   }
   .tab-fin { 
     .border-box;
@@ -263,35 +264,6 @@ body {
     }
   }
 
-
-
-
-  .form-tipo-despesa {
-    margin: 20px 0 0 0;
-    display: none;
-    
-    input {
-      font-size: 16px;
-      border: 1px solid rgba(0,0,0,0.2);
-      padding: 10px;
-      width: 50%;
-      outline: none;
-      box-shadow: none;
-      .transition-all(0.1s);
-      &:focus {
-        box-shadow: 0 0 3px @color-quaternary;
-      }
-    }
-    input[type="submit"] {
-      background-color: @color-tertiary;
-      color: @color-contrast;
-      cursor: pointer;
-      .transition-all(0.1s);
-      &:hover {
-        background-color: @color-quaternary;
-      }
-    }
-  }
   a {
     text-decoration: none;
     color: @color-link-default;
@@ -303,76 +275,5 @@ body {
       color: @color-link-visited;
     }
   }
-
-  .form-despesa {
-    .form-despesa-bloco {
-      float: left;
-      width: 48%;
-      display: block;
-    }
-    input{
-      color: @color-font;
-      font-family: @font-primary;
-      font-size: 15px;
-      border: 1px solid rgba(0,0,0,0.2);
-      padding: 10px;
-      width: 95%;
-      outline: none;
-      box-shadow: none;
-      margin: 0;
-      .transition-all(0.1s);
-      &:focus {
-        box-shadow: 0 0 3px @color-quaternary;
-      }
-    }
-    select {
-      color: @color-font;
-      font-family: @font-primary;
-      box-shadow: none;
-      padding: 5px;
-      margin: 0;
-      width: 95%;
-      font-size: 16px;
-      outline: none;
-      .transition-all(0.1s);
-      &:focus {
-        box-shadow: 0 0 3px @color-quaternary;
-      }
-    }
-    #despesa-desc {
-      font-size: 16px;
-      color: @color-font;
-      border: 1px solid rgba(0,0,0,0.3);
-      min-width: 95%;
-      min-height: 50px;
-      max-width: 95%;
-      max-height: 70px;
-      outline: none;
-      margin: 0;
-      padding: 10px;
-      .transition-all(0.1s);
-      &:focus {
-        box-shadow: 0 0 3px @color-quaternary;
-      }
-    }
-    #despesa-val {
-    }
-    #despesa-data {
-
-    }
-  }
-
-
-
-  .bloco-form {
-    margin: 15px 0 0 0;
-  }
-
-
-
-
-
-
-
 
 }
