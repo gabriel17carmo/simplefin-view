@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
-  <link href='css/glDatePicker.default.css' rel='stylesheet' type='text/css'>
+  <link href='css/datepickr.css' rel='stylesheet' type='text/css'>
   <title>Simplefin - Simples gerenciador de finanças pessoais</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -66,19 +66,19 @@
 
   </div>
   <div class="container">
-    <!-- <h1 class="titulo">Adicionar Despesa</h1> -->
-    <a id="show-form-tipo-receita" href="#">Criar tipo de receita</a>
-    <a id="show-form-tipo-despesa" href="#">Criar tipo de despesa</a>
+    <h1 class="titulo">Realizar Lançamentos</h1>
+    <a id="show-form-tipo-receita" href="#">Criar receita</a>
+    <a id="show-form-tipo-despesa" href="#">Criar despesa</a>
 
 
     <div class="add-tipo-receita">
       <div class="toggle-receita">
         <form action="" class="form-tipo-receita">
           <div class="bloco-form">
-            <input type="text" class="form-input" id="nome" placeholder="Nome do tipo de receita" required="">
+            <input type="text" class="form-input" id="nome" placeholder="Nome da receita" required="">
           </div>
           <div class="bloco-form">
-            <input type="submit" class="form-input" value="Salvar tipo de receita" id="">
+            <input type="submit" class="form-input" value="Salvar receita" id="">
           </div>
         </form>
       </div>
@@ -88,10 +88,10 @@
       <div class="toggle-despesa">
         <form action="" class="form-tipo-despesa">
           <div class="bloco-form">
-            <input type="text" class="form-input" id="nome" placeholder="Nome do tipo de despesa" required="">
+            <input type="text" class="form-input" id="nome" placeholder="Nome da despesa" required="">
           </div>
           <div class="bloco-form">
-            <input type="submit" class="form-input" value="Salvar tipo de despesa" id="">
+            <input type="submit" class="form-input" value="Salvar despesa" id="">
           </div>
         </form>
       </div>
@@ -103,8 +103,8 @@
       
       <div class="">
         <form action="" class="form-fin form-receita" >
-          <div class="form-despesa-bloco">
-            <h2>Criar receita</h2>
+          <div class="form-receita-bloco">
+            <h2>Lançamento de receita</h2>
             
             <div class="bloco-form">
               <select id="" class="" size="4">
@@ -116,24 +116,24 @@
               </select>
             </div>
             <div class="bloco-form">
-              <input type="text" name="despesa-desc" id="despesa-desc" placeholder="Descrição" />
+              <input type="text" name="receita-desc" id="receita-desc" placeholder="Descrição" />
             </div>
-            <div class="bloco-form despesa-inline">
+            <div class="bloco-form receita-inline">
               <div class="number-cifra">
                   <span class="cifra">R$</span>
-                  <input type="text" min="0.00" max="9999.99" step="1" size="4" name="despesa-val" id="despesa-val" placeholder="Valor da receita" />
+                  <input type="text" min="0.00" max="9999.99" step="1" size="4" name="receita-val" id="receita-val" placeholder="Valor da receita" />
               </div>
             </div>
-            <div class="bloco-form despesa-inline">
-              <input type="text" id="despesa-data" value="" placeholder="Data">
+            <div class="bloco-form receita-inline">
+              <input type="text" id="receita-data" value="" placeholder="Data">
             </div>
           <div class="bloco-form">
-            <input type="submit" class="form-input" value="Salvar receita" id="">
+            <input type="submit" class="form-input" value="Lançar receita" id="">
           </div>
           </div>
         </form>
         <form action="" class="form-fin form-despesa">
-          <h2>Criar despesa</h2>
+          <h2>Lançamento de despesa</h2>
           <div class="form-despesa-bloco">
             
             <div class="bloco-form">
@@ -158,7 +158,7 @@
               <input type="text" id="despesa-data" value="" placeholder="Data">
             </div>
           <div class="bloco-form">
-            <input type="submit" class="form-input" value="Salvar despesa" id="">
+            <input type="submit" class="form-input" value="Lançar despesa" id="">
           </div>  
           </div>
         </form>
@@ -172,11 +172,14 @@
 </div>
 <script src="js/jquery-1.11.0.min.js"></script>
 <script src="js/add.js"></script>
-<script src="js/glDatePicker.js"></script>
+<script src="js/datepickr.js"></script>
 <script>
-  // $('#despesa-data').glDatePicker({
-  //   showAlways: false
-  // });
+  new datepickr('despesa-data', {
+    'dateFormat': 'm/d/y'
+  });
+  new datepickr('receita-data', {
+    'dateFormat': 'm/d/y'
+  });
 </script>
 </body>
 </html>

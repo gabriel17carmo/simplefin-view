@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+  <link href='css/datepickr.css' rel='stylesheet' type='text/css'>
+  <title>Simplefin - Simples gerenciador de finanças pessoais</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div>
+  <div class="header">
+
+    <div class="logo">Simplefin</div>
+    <div class="meses-header">
+    <table class="tab-header">
+      <tr class="tab-header-cab">
+        <th class="tab-header-cell tab-tipo"></th>
+        <th class="tab-header-cell">Jan</th>
+        <th class="tab-header-cell">Fev</th>
+        <th class="tab-header-cell">Mar</th>
+        <th class="tab-header-cell">Abr</th>
+        <th class="tab-header-cell">Mai</th>
+        <th class="tab-header-cell">Jun</th>
+        <th class="tab-header-cell">Jul</th>
+        <th class="tab-header-cell">Ago</th>
+        <th class="tab-header-cell">Set</th>
+        <th class="tab-header-cell">Out</th>
+        <th class="tab-header-cell">Nov</th>
+        <th class="tab-header-cell">Dez</th>
+        <th class="tab-header-cell"></th>
+      </tr>
+    </table>
+
+    </div>
+
+    <a href="" class="link-logout">
+      <div class="logout">
+        <div class="img-logout" title="Sair"></div>
+      </div>
+    </a>
+  </div>
+
+
+  <div class="nav">
+    <ul class="ul-nav">
+      <li class="menu-item">
+        <a href="" id="icone-home" class="menu-item-link"><div class="menu-icone"></div><br>Dashboard</a></li>
+      <li class="menu-item">
+        <a href="receitas.html" id="icone-receitas" class="menu-item-link fundo-escuro"><div class="menu-icone"></div><br>Receitas</a></li>
+      <li class="menu-item">
+        <a href="despesas.html" id="icone-despesas" class="menu-item-link"><div class="menu-icone"></div><br>Despesas</a></li>
+      <li class="menu-item">
+        <a href="" id="icone-add-receita" class="menu-item-link fundo-escuro"><div class="menu-icone"></div><br>Adicionar <br>Receita</a></li>
+      <li class="menu-item">
+        <a href="" id="icone-add-receita" class="menu-item-link"><div class="menu-icone"></div><br>Adicionar <br>Despesa</a></li>
+      <li class="menu-item is-active">
+        <a href="" id="icone-conta" class="menu-item-link fundo-escuro"><div class="menu-icone"></div><br>Contabilizar <br>Mês</a></li>
+      <li class="menu-item">
+        <a href="" id="icone-config" class="menu-item-link"><div class="menu-icone"></div><br>Configuração</a></li>
+    </ul>
+
+
+
+
+  </div>
+  <div class="container">
+    <h1 class="titulo">Contabilizar Mês</h1>
+
+
+  </div>
+  <footer class="footer"></footer>
+</div>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/add.js"></script>
+<script src="js/datepickr.js"></script>
+<script>
+  new datepickr('despesa-data', {
+    'dateFormat': 'm/d/y'
+  });
+  new datepickr('receita-data', {
+    'dateFormat': 'm/d/y'
+  });
+</script>
+</body>
+</html>

@@ -48,10 +48,10 @@
   }
 }
 
-
 /* CADA DESPESA */
 .form-fin {
-  .form-despesa-bloco {
+  .form-despesa-bloco,
+  .form-receita-bloco {
     float: left;
     width: 47.5%;
     margin-right: 2.5%;
@@ -95,7 +95,6 @@
     font-family: @font-cash;
     position: relative;
     input {
-      text-align: center;
       padding-left: 40px;    
       /*padding-right: 45px;  */
     }
@@ -119,7 +118,8 @@
 
   .bloco-form {
     margin: 15px 0 0 0;
-    &.despesa-inline {
+    &.despesa-inline,
+    &.receita-inline {
       width: 48.67%;
       display: inline-block;
     }
